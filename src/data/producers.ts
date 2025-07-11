@@ -1,0 +1,2601 @@
+import { Producer } from '../types';
+
+// /e_background_removal = Codigo usado para remoção de backgound das garrafas
+// Lista de produtores, com identificação clara da região via regionId
+export const producers: Producer[] = [
+  {
+    id: 'christian-etienne',
+    name: 'Christian Etienne',
+    regionId: 'champagne', // ID da região, usado para correspondência segura
+    region: 'Champagne',   // Nome da região (para exibição)
+    bannerImage: 'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1695310896079-0EB7UGL7TDJ7MO9QGF11/Cristian+Etienne+footer.jpg?format=2500w', // Unique banner image for producer
+    description: 'Christian Etienne is a traditional man trying to do what it takes to keep his tiny 9 hectares producing extraordinary fruit. Located in Meurville, Southeast of the Valle Marnes in Aube / Côtes de Bar, he works his land ecologically, while his six children grow up among the vines, keeping alive the family tradition of many generations. It is testament to their endurance, to survive despite two wars in the region and near bankruptcy in between. The vines are as sturdy as Christian themselves, digging deeply into the pure limestone and chalky soils surrounding the house. They are meticulously cared for, as they are as much part of the family, with proper selection while harvesting. Although the cellar is tiny, Christian vinifies his wines separately, producing several cuvées, charting the expression of each varietal and parcel soil type. These are hand-crafted wines by the best definition. Christian has much to do to keep the family tradition alive. Now, with his popularity climbing in the US, he will secure that continuity for the future.',
+    midia: [
+      'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1517432641318-O9YICAEC50REV9TVE9BS/C.+ETIENNE.jpg?format=750w',
+      'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1517432643196-9N9A0YTZ5QW9DPQHT1ZD/Degorgement.jpg?format=1500w',
+      'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1517432677093-8XH5YMRZUJF5REQRZGY8/CHAMPAGNE+cote-des-bars.jpg?format=500w',
+      'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1517432693614-BIZ0AHY6FFULNW38LKNM/Etienne+btls.jog.jpg?format=750w',
+      'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1517432702947-GIK2APBTCBNU28CSY4EO/ETIENNE+UVA.jpg?format=750w',
+      
+    ],
+    wines: [
+      {
+        id: 'champagne-brut-rose',
+        name: 'Champagne Brut, ‘Tradition’',
+        producer: 'Christian Etienne',
+        region: 'Champagne',
+        country: 'France',
+        vintage: 'NV',
+        grape: ['75% Pinot Noir, 25% Chardonnay'],
+        description: 'A refined and elegant Brut Rosé, with delicate bubbles, aromas of red berries, and a crisp mineral finish. Crafted using the traditional method.',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1746637841/Champagne_Christian_Cuvee_Tradition_ewyngx.png', // image for wine 1
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        }
+      },
+      {
+        id: 'champagne-blanc-de-blancs',
+        name: 'Champagne Blanc de Blancs',
+        producer: 'Christian Etienne',
+        region: 'Champagne',
+        country: 'France',
+        vintage: 'NV',
+        grape: ['100% Chardonnay'],
+        description: 'A crisp and elegant Blanc de Blancs with notes of citrus and white flowers, showcasing the purity of Chardonnay grapes.',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1746638458/Champagne_Christian_Cuvee_Blanc_de_Blancs_zjuh1r.png', // image for wine 2
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        }
+      },
+      {
+        id: 'champagne-rose',
+        name: 'Champagne Rosé',
+        producer: 'Christian Etienne',
+        region: 'Champagne',
+        country: 'France',
+        vintage: 'NV',
+        grape: ['70% Pinot Noir', '30% Chardonnay'],
+        description: 'A delicate Rosé with aromas of red berries and a fresh, crisp finish.',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1746639391/Champagne_Christian_Cuvee_La_Rosee_sj3khj.png', // image for wine 3
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        }
+      },
+      {
+        id: 'champagne-brut-classic',
+        name: 'Champagne Brut Classic 2012',
+        producer: 'Christian Etienne',
+        region: 'Champagne',
+        country: 'France',
+        vintage: 'NV',
+        grape: ['50% Pinot Noir', '50% Chardonnay'],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1746637841/Champagne_Christian_Cuvee_Tradition_ewyngx.png', // image for wine 4
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        }
+      },      
+    ]
+  },
+  {
+    id: 'domaine-goulley-et-fils',
+    name: 'Domaine Goulley et Fils',
+    regionId: 'bourgogne',
+    region: 'BURGUNDY',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1748000272/logo_portes_noel_u5ftfy.png',
+    description: `Since 1991 the estate has turned to organic farming for their approximately 50 year old vines in Chablis and Chablis 1er Crus and 25 year old vines in Petit Chablis. The vineyards cover 7.2 hectares, divided into thirds among the three designations. They strive for capturing the quintessential focus of what Chablis is, the minerality paired with freshness. They are also unique in that they do not use any animal by-products in the production of their wines making them vegetarian and vegan friendly.
+Certified Organic - Vegan Friendly
+www.jeangoulleyetfils.fr/
+`,
+    midia: [
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748000229/Band3_bcidst.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748000237/mont_milieu-1_cibaz0.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748000245/GOU-CAV-08_284_29_ab51pg.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748000251/Goulley_Bottles_zs7xba.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748000269/Goulley_Map_v3u4yu.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748000272/logo_portes_noel_u5ftfy.png',
+    ],
+    wines: [
+      {
+        id: '',
+        name: 'Petit Chablis',
+        producer: '',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/v1748001297/TJfrSjyERwKN3GB_fxdQMA_pb_600x600_mz8vmy.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Chablis',
+        producer: '',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/e_background_removal/upload/v1748001314/chablis_2B2022_tn9wlt.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Chablis Vieilles Vignes Reserve',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748001318/chablis-vieilles-vignes_2B2022_qfwvpa.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Chablis 1er Cru, "Mont Milieu"',
+        producer: '',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748001491/chablis-premier-cru-mont-de-milieu_2B2022_rs7uzu.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-bonnardot',
+    name: 'Domaine Ludovic Bonnardot',
+    regionId: 'bourgogne',
+    region: 'BURGUNDY',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1748020553/CAVE-scaled_wioztt.jpg',
+    description: `Domaine Bonnardot is a family estate in Bonnecontre, near the Citeaux Abbey. The family has a long heritage of winemaking in the area dating back to 1470, but in more recent memory it was Elizabeth who graduated from studying enology in Beaune, studied with Jules Chauvet and began to practice more natural approaches to her winemaking. Today her son Ludovic, who first began experimenting with natural winemaking as a teenager with grapes from an old parcel of his grandfather's, now guides the winemaking at the estate. He prefers not to add sulfur to his wines. After completing his education in winemaking, he returned to his family lands in 2005 and began to convert the 15 hectares, situated between Pommard and Santenay, to purely organic farming. `,
+    midia: [
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748020621/Savio_2B_bonnardot_r7eowe.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748020609/IMG_5717_ohscdl.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748020598/Bonnardot_Family_u0tut9.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748020589/with_Bornnardot_bros_k4u0n4.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748020553/CAVE-scaled_wioztt.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1748020553/CAVE-scaled_wioztt.jpg',
+    ],
+    wines: [
+      {
+        id: '',
+        name: 'Chassagne-Montrachet',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748021257/CHASSAGNEMONTRACHET-2019_yydpg8.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Santenay Blanc “Sous La Roche”',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748021264/P1190250_clipped_rev_1_copy_jjdzzp.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Hautes Cotes de Beaune ',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748021303/BOURGOGNE-ROUGE-HCB-2019_f1yb3m.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Pommard',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748021330/POMMARD-2019_lh1vmb.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Maranges, ‘Sur Le Bois’',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748021487/BONNARDOT_2BMARANGES_jdmvri.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Santenay Rouge',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1748021528/BONNARDOT_2BSANTENAY_2BROUGE_g9nfem.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-remi-jeanniard',
+    name: 'Domaine Rémi Jeanniard',
+    regionId: 'bourgogne',
+    region: 'BURGUNDY',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749731365/67ab29ae-5851-455f-98d0-90155d06cf68_hhx0vx.jpg',
+    description: `Domaine Rémi Jeanniard, an estate of modest proportions for a modest man, comes from the plot of land his father split between him and his brother upon retiring in 2003. His first bottling was in 2004. The domaine is located in Morey-St.-Denis, in the heart of the Côte de Nuits, with plantings in Morey St. Denis, Gevrey Chambertin, and Chambolle Musigny. Rémi painstakingly tends to his six hectares of vines, with the pride one expects from the heir to a family fortune of old vines. He practices sustainable farming, pruning in Spring to control yields, regularly working the vines to prevent the soil from settling, and refraining from the use of chemical fertilizers. In July, a green harvest is practiced in order to intensify the aroma and richness of the grapes. Grapes are handpicked selectively, and are fermented using only natural yeasts, before being bottled without filtering or fining. He prefers to use very little SO2, choosing instead to preserve the wine’s freshness with carbonic gas, and uses barrels from Central France, the kind he believes best preserve the wine’s delicacy.`,
+    midia: [
+     'https://res.cloudinary.com/dglghqker/image/upload/v1749731370/jeanniard_clos_des_ormes_o6of34.jpg',
+     'https://res.cloudinary.com/dglghqker/image/upload/v1749731371/JEANNIEAR_BOURG_RG_PARCEL_FROM_1953_rh5pkr.jpg',
+     'https://res.cloudinary.com/dglghqker/image/upload/v1749731371/37_c31b866b-1477-479b-9ebc-a75b3e01bed7_600x_iaqmpe.jpg',
+     'https://res.cloudinary.com/dglghqker/image/upload/v1749731374/Bourgogne-aligote-domaine-r-mi-jeanniard-2019_cww2ku.jpg',
+     'https://res.cloudinary.com/dglghqker/image/upload/v1749731365/IMG_5720_aiqzeb.jpg',
+     
+
+    ],
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749731368/remi-jeanniard-bourgogne-rouge_jhub2t.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749731367/remi-jeanniard-morey-saint-denis-1er-cru-les-ruchots-rouge-bourgogne_8bc919e1-be92-4768-adc5-0c1af34bb109_800x_zwlfhs.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749731366/domaine-remi-jeanniard_i2km3l.png', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749731366/Domaine-Remi-Jeanniard-Morey-Saint-Denis-VV-2021-1_zxgm4h.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'jean-claude-chanudet',
+    name: 'Jean-Claude Chanudet',
+    regionId: 'beaujolais',
+    region: 'BEAUJOLAIS',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749836715/Chateau_Cambon_vines_vl6fyb.jpg',
+    description: `Jean-Claude Chanudet is one of the movers and shakers in the natural wine world of Beaujolais. This particular parcel is one bought with Marie LaPierre in 2010, and is composed of 2.5 hectares of granitic soils. He follows a similar philosophy to the greats of Beaujolais: he interferes as little as possible in both the vineyard and the cellar, refraining from the use of harmful, inorganic chemicals and additives. Only indigenous yeasts are used in the cellar, and a long, slow carbonic maceration gives the suppleness and softness for which Chanudet’s cuvées have become known. While not certified organic, Chanudet follows the same practices to a tee, stating that it is not up to the organic winemakers to write “Organic wine” on their labels, but rather to the others to indicate “Chemically-produced wine.” Chanudet’s wines are intense and structured and are built for ageing.`,
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836725/Jean_Claude_Chanudet_26_Marie_LAPIERRE_0_mnkza7.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836728/Jean_2BClaude_2BChanudet_2B_26_2BMarie_2BLAPIERRE_2B1_liwrbk.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836703/Chanudet_2BSoares.families_t0q686.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836706/Chanudet_the_king_of_Morgon_utipuj.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836697/jean-claude-genevieve-chanudet-465927_re6jso.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836734/chat_tj5bgq.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836712/6e2b2af5-3159-4d54-8322-2e343cbf77f2_l0ywwx.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836701/Genevieve_JeanneandJean-ClaudeChanudet-DomaineChamonard_ncrlxn.jpg",
+    ],
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'Alexandre Chanudet',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/f_png/v1749836693/13184224-1_1612388429_copy_d0ogjx.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'chateau-cambon',
+    name: 'Château Cambon',
+    regionId: 'beaujolais',
+    region: 'BEAUJOLAIS',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749837534/Vineyards_-_La_Cuvee_du_Chat_pkgnwv.jpg',
+    description: `(Beaujolais, France) 
+
+What began as a project of three friends: the late Marcel Lapierre, Marie Lapierre and Jean-Claude Chanudet. The trio purchased this 13 hectare parcel upon realizing that, despite being designated outside the grand cru status, it held prestige beyond title. Planted originally in 1914 in 3 parcels, it is complimented by a mixed soil composition of clayey granite and calcareous-sand. They expanded the plantings to make use of the subtle variations below, and combined the wines to create a harmonious (and amazing) definition of the entire plot. The ‘réserve’ bottling is from the oldest vines, called ‘Le Cambon.’ Following the organic practices they began so long ago, they tend their vines without chemicals or inorganic fertilizers. Only natural yeasts are used in the cellar, and time is effectively given to the resting wines in the 200 year old foudre casks. Marie Lapierre and Jean-Claude Chanudet have been conducting the work to new heights, establishing improvements and maintaining the "old school" practices in the vineyards and cellars of this centenary Chateau.`,
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836725/Jean_Claude_Chanudet_26_Marie_LAPIERRE_0_mnkza7.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836728/Jean_2BClaude_2BChanudet_2B_26_2BMarie_2BLAPIERRE_2B1_liwrbk.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836703/Chanudet_2BSoares.families_t0q686.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836706/Chanudet_the_king_of_Morgon_utipuj.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836697/jean-claude-genevieve-chanudet-465927_re6jso.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836734/chat_tj5bgq.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836712/6e2b2af5-3159-4d54-8322-2e343cbf77f2_l0ywwx.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749836701/Genevieve_JeanneandJean-ClaudeChanudet-DomaineChamonard_ncrlxn.jpg",
+    ],
+    wines: [
+      {
+        id: 'FCA028',
+        name: 'Beaujolais',
+        producer: 'Alexandre Chanudet',
+        region: 'Beaujolais',
+        country: 'France',
+        vintage: '',
+        grape: [''],
+        description: `From 50 year old vines all hand-harvested in October. Carbonic maceration occurs with natural yeasts in enamel tank (separate parcels). Some pumping over might be used to stimulate activity. All wine moved to foudre to rest on lees. Bottled with little to no SO2.`,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749841784/12555_hwkska.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Beaujolais",
+          Appellation: "",
+          ColorStyle: "RED",
+          Grapes: "100% Gamay",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FCA029',
+        name: 'Brouilly',
+        producer: 'Alexandre Chanudet',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: `From vines planted on 2 hectares of granitic and clay soils (Briante & Bel Air), the grapes are hand-harvested and rigorously sorted in the vineyard. The wine undergoes carbonic maceration for 10-15 days without SO2 or any other manipulation. Aged in oak barrels between 6-9 months. `,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749841786/Chateau_Cambon_Brouilly_bgsagw.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Beaujolais",
+          Appellation: "",
+          ColorStyle: "RED",
+          Grapes: "100% Gamay",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FCA025',
+        name: 'Château Cambon 100%  Gamay',
+        producer: 'Alexandre Chanudet',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: ``,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749843019/gamay_100_zyjv1s.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Beaujolais",
+          Appellation: "",
+          ColorStyle: "RED",
+          Grapes: "100% Gamay",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-joseph-chamonard',
+    name: 'Domaine Joseph Chamonard',
+    regionId: 'beaujolais',
+    region: 'BEAUJOLAIS',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1750785192/Morgon_Batch_Photo_glxvdc.jpg',
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785194/hqdefault_ywiwxm.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785195/01_Vine_Trail_Domaine_Chamonard_1_1_mlc2ed.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785195/Domaine_chamonard_morgon_rgmr3v.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785196/01_Vine_Trail_Domaine_Chamonard_3_4_yzpiuf.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785194/70fqi54zfve1sx1ydlxm3w85hztl_cwn2cp.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785194/open-uri20210913-7279-5fyi63_ebzelb.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785193/https_3A_2F_2Fsubstack-post-media.s3.amazonaws.com_2Fpublic_2Fimages_2Fcec4173c-6227-4cd4-87ba-bb99f5e6b19b_3008x1504_g4v1km.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750785192/Vineyards_-_Morgon_2_gkckkd.jpg",
+      "",
+      "",
+
+    ],
+    description: `(Beaujolais, France) \n
+    
+    Having lived and worked among the ‘superstars’ of Beaujolais, Joseph Chamonard created a wonderful environment for his vines in Morgon. On the hill of Morgon, his vines stayed healthy without chemical assistance, remaining in their natural living soils alongside the packed earth and starved vines of his neighbors. Sadly, Joseph passed away in 1990, leaving his daughter Genevieve and her husband Jean-Claude Chanudet to carry on the health of his 4 hectare parcels, located in Corcelette, near the town of Ville-Morgon. With each successive vintage the duo has strictly kept to disavowing chemical treatments, in or out of the vineyards. Harvest is done by hand late in the season for full natural ripeness and complexity, with only natural yeasts used for fermentation and little else done outside of patient guidance to its natural end. The wine is made the traditional way with respect to nature. As some of the others of his era passing on as well (Marcel LaPierre in 2010), there is a sense that the pattern set here in Beaujolais will be altered. With so much natural beauty remaining, it will take more than a gang of four to do so, after all, it's now almost tradition.`,
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1750785193/morgonchamonardnew_p6abmo.png', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-bertrand',
+    name: 'Domaine Bertrand',
+    regionId: 'beaujolais',
+    region: 'BEAUJOLAIS',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1747165839/header-010_cxb80l.jpg',
+   description: `In 2017, our vineyard began its transition to Organic Farming. Our organic certification has been in effect since the 2020 vintage.
+Controlling yields, working the soils with light, shallow plowing, and maintaining rigorous monitoring (counting – inspections – observations) allow us to limit treatments and intervene when necessary, all while respecting the environment and our terroir. The goal is to offer wines with fewer inputs that perfectly reflect our terroirs and environment.
+The majority of our vines are covered with grass (naturally or with cereal sowing) to improve soil structure and load-bearing capacity, protect the soil from climatic stresses, and facilitate the development of biological activity.
+For our red wines, the vines come from the "Gamay" grape variety – a black-skinned grape with white juice. They are planted at a density of 8,500 to 10,000 vines per hectare, trained in a short goblet style. The Beaujolais whites, made from the "Chardonnay" grape variety, are planted at a density of 6,000 vines per hectare and trained in a long Guyot style.
+We have also begun restructuring part of our vineyard in recent years by choosing a "wide vine" training system (2m x 0.80m, 6,250 vines/ha) to facilitate soil work, improve vine aeration, and reduce the labor time per hectare. This vine structure also allows us to work with winter cover crops (cereals, legumes) between the rows to manage and occupy the soil with a vegetative cover.`,
+
+    wines: [
+      //Bourgogne Blanc
+      {
+        id: 'FBE000',
+        name: 'Bourgogne Blanc',
+        producer: 'Domaine Bertrand',
+        region: 'Beaujolais',
+        country: 'France',
+        vintage: '2023',
+        grape: ['100% Chardonnay'],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1747166031/qfnAm_CgSs-UdOQqNRQkPg_pb_x600_ipwzzu.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Beaujolais",
+          Appellation: "Bourgogne",
+          ColorStyle: "White Wine",
+          Grapes: "100% Gamey",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "Certifi Orgnaic",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      //Fleuri, 'LES DÉDUITS'
+      {
+        id: '',
+        name: "Fleuri, 'LES DÉDUITS'",
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1747166053/fleurie_copy_gfflvb.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      //Moulin à Vent, 'LES PETITS BOIS'
+      {
+        id: '',
+        name: "Moulin à Vent, 'LES PETITS BOIS'",
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1747166039/moulin-a-vent_44_sh54sd.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'vignobles-bodillard',
+    name: 'Vignobles Bodillard',
+    regionId: 'beaujolais',
+    region: 'BEAUJOLAIS',
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786111/Andre_Bodillard_B_26W_w2yus1.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786112/Renaud_Bodillard_koqblp.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786113/Morgon_Tradition_Cuvee_Alexia_NV_front_label_nyvtid.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786113/kgAOcSJ9S5aLpjNViNZq_Q_375x500_kbe1g8.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786110/Harvest_yimro5.jpg",
+    
+    ],
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1750786115/Bodillard_Alexia_Cuvee_Corelette__48241.1698823441_akddtn.jpg',
+    description: `The Bodillard vineyards are planted on the undulating hills around Morgon, in granitic and schist soils that are ideal for Gamay. The vines are from 20-100 years old, bringing a wide variety of distinct, unique aromas to each wine.
+The vineyards have been cared for by the Bodillard family for 5 generations. Today,  Renaud Bodillard cares for the family vineyards with organic and biodynamic farming. Harvest is done exclusively by hand.
+Once in the winery, the grapes are carefully into concrete vats or oak barrels for whole grape carbonic maceration. Fermentation is spontaneous with native yeasts and the wines are aged in carefully selected French oak vats and barrels.
+The Bodillard family proudly takes part in every step of the process from vine to bottle, to guarantee the quality of their wines.`,
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1750786112/morgon-corcelette-cuvee-alexia-vignobles-bodillard-red_rhryoq.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'richard-family',
+    name: 'Richard Family',
+    regionId: 'jura',
+    region: 'JURA',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1750786501/GODIN-RICHARD-116_spl8eo.jpg',
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786499/GODIN-RICHARD_064_s4fcic.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786496/weingut-von-pierre-richard_qivtru.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786501/_DSC04035_b1pnou.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786502/_DSC03944_goyuj9.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786471/bandeau_home_1_jfgkqz.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786470/52bba57106f58e0fc08fa511461cb372-GODIN-RICHARD-067-1440x900_h9ma4r.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786471/IMG_1303__38369.1578611263_r0rk6o.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1750786487/dji_0066_u9klpc.jpg",
+   
+    ],
+    description: `The estate has its roots beginning in 1919 when Xavier Richard purchased the adjacent properties from his neighbors, but it wasn't until his son Jean Richard took over did they begin concentrating on wine. In fact, by 1947 the domaine cultivated a local reputation in the area for its wines and by 1976, Pierre Richard continued the family tradition extending the property to Mantry where a former hill of vines has been reclaimed. Situated in the heart of the Jura, between Seille River and Lons le Saunier, the soils are perfect for white wine making and the vineyard plots have names that reflect on their past uses: "Les Charmes", "La Croix du Gyps" ... etc. But the domaine is small, encompassing only 9 hectares between the communes of Le Vernois, Voiteur and Mantry. After studying viticulture and oenology at Beaune, taking jobs in vineyards of St. Emilion and Cotes de Provence, Vincent returned to take over the family domaine in 2009 and follows in a long tradition of organic practices in the making of his wines. 
+                    \nPracticing Organic. With the 2021 harvest the domaine will be EcoCert Certified.
+                    \nwww.domainepierrerichard.com/  `,
+    wines: [
+      {
+        id: 'FPC034',
+        name: `Crémant du Jura, Rosé Brut, "Perles d'automne"`,
+        producer: 'Pierre Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: `From 35 year old vines grown on clay-limestone soils, hand-harvested at the end of October and undergoes selective vineyard sorting. Maceration lasts between six and eight hours with primary spontaneous fermentation occurring in stainless steel tanks for 10-15 days under temperature control. The wine is kept on the lees for 15 months with no battonage. The blending and bottling are done during the following year's harvest. Aged for 15 months on lees in the bottle before disgorgement. Not filtered. Dosage is .3 g/cl.`,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/v1750786827/min2_godin-richard_perlesdautomne_01_dnndhm.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Jura",
+          Appellation: "Crémant du Jura",
+          ColorStyle: "Rosé",
+          Grapes: "60% Pinot Noir, 40% Chardonnay",
+          HarvestDate: "September",
+          SO2: "",
+          SoilComposition: "Clay-limestone",
+          Farming: "Conversion to Organic",
+          AgeOfVines: "35 years",
+          FiningFiltration: "Not filtered",
+          Winemaking: `The Cellar \n <br>
+              Yeast: Spontaneous
+              Maceration: 6-8 hours
+              1st Fermentation: 10-15 days in stainless steel
+              Malolactic: Completed spontaneously
+              2nd Fermentation & Aging: 15 months in bottle
+              Disgorgement: Late March 2019
+              Dosage: .3 g/cL
+              Residual Sugar: 4.1 g/L
+              Alcohol: 12.2%
+              Finishing: Not filtered
+              Production: 4,000 bottles
+              Closure: Cork & cage`
+        },
+      },
+      {
+        id: 'FPC033',
+        name: 'Crémant du Jura, Blanc Brut, "Harmonie"',
+        producer: 'Pierre Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: `From 35 year old vines are grown on clay and limestone soils, the grapes are hand-harvested at the end of October. Primary fermentation occurs in stainless steel tanks and lasts two weeks with temperature control. The blending and bottling is done during the following year's harvest. Aged between 24-36 months on lees before bottling and disgorgement. Dosage is .4 g/cl.`,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1750787055/min2_cremant-du-jura_harmonie_poqv1v.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Jura",
+          Appellation: "Crémant du Jura",
+          ColorStyle: "Sparkling",
+          Grapes: "100% Chardonnay ",
+          HarvestDate: "Septamber",
+          SO2: "0.2gl",
+          SoilComposition: "Clay-limestone",
+          Farming: "Conversion to Organic",
+          AgeOfVines: "35 years",
+          FiningFiltration: "Not filtered",
+          Winemaking: `The Cellar \n
+              Yeast: Spontaneous
+              Maceration: 6-8 hours
+              1st Fermentation: 10-15 days in stainless steel
+              Malolactic: Completed spontaneously
+              2nd Fermentation & Aging: 24-36 months in bottle
+              Disgorgement: Late March 2019
+              Dosage: .4 g/cl
+              Residual Sugar: 3.6 g/L
+              Alcohol: 11.8%
+              Finishing: Not filtered
+              Closure: Cork & cage` 
+        },
+      },
+      {
+        id: 'FVC005',
+        name: 'Crémant du Jura, ‘Finambulle’',
+        producer: 'Vicent Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1750787110/Finambulle_qs7tgb.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Côtes du Jura, ‘SA T´Y VA ‘?',
+        producer: 'Pierre Richard',
+        region: '',
+        country: 'France',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/0914ed0f-e711-4d6e-b2a2-aaa6c1ceb274/SA+TY+VA.png?format=1000w', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Côtes du Jura, ‘OXÍ‘',
+        producer: 'Pierre Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1bd1536a-f094-42f2-aefb-6f73e4b63d35/OXI.png?format=750w', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Côtes du Jura, ‘LES MARNES‘',
+        producer: 'Pierre Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/fe70dfab-e2c4-4304-a628-6d95be411837/LES+MARNES.png?format=2500w', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Côtes du Jura, ‘TRADITION‘',
+        producer: 'Pierre Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/b1f5cf28-1011-4c46-9da1-70436101a308/TRADITION.png?format=2500w', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Côtes du Jura, ‘LE 54‘',
+        producer: 'Pierre Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/bc1f8423-c947-4907-b08e-517b32fe60a9/LE+54.png?format=1000w', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: 'Côtes du Jura, ‘POULSARD‘',
+        producer: 'Pierre Richard',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://images.squarespace-cdn.com/content/v1/56d5ea642fe13198418f638c/1626194367816-U93C383HVZDOBPM2G09Q/Richard+Poulsard+FINAL.jpg?format=500w', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'maison-yves-duport',
+    name: 'Maison Yves DuPort',
+    regionId: 'bugey',
+    region: 'BUGEY',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1747322829/t1mjbep9jyrxrmuocxgcjwnalbq9_fhqrfq.jpg',
+    description: '(Bugey, France) Gradually over four generations the estate has been built up to almost 10 hectares in this rugged terrain. There are three main soil types, each matched with its best corresponding varietal as a result of careful observations: the soils of the Montagnieu area white marl clay, perfect for Altess (Roussette) and Mondeuse; the silica and limestone soils of the moraine hillside slopes are perfect for Chardonnay; and finally the clay and limestone mountain scree soils where Pinot Noir excels. Yves make his cuvees by working in fellowship with neighboring winemakers of similar mindsets, the production occurring either fully or partially in his cellar – the result is that about half the production is Bugey blanc, 30% is Bugey method traditionnelle, and 20% is Bugey rouge. Make no mistake, Yves tends to all the vines and sees them through to bottling, preferring to work with nature, the soil and the climate, using no chemicals whatsoever, while in the cellar acting more as a quiet conductor to the forces of nature as they coalesce. Domaine Yves Duport ',
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1747338172/WhatsApp_Image_2025-05-15_at_20.41.48_2_qj0ewe.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1747338171/WhatsApp_Image_2025-05-15_at_20.41.48_3_sh9w2m.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1747338168/WhatsApp_Image_2025-05-15_at_20.41.47_iywfgb.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1747338169/WhatsApp_Image_2025-05-15_at_20.41.48_4_r8wcsz.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1747338167/WhatsApp_Image_2025-05-15_at_20.41.48_jwkmyo.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1747338166/WhatsApp_Image_2025-05-15_at_20.41.48_1_cffiih.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1747338461/b64167_10baf31d5323467eba97e651c364eb78_mv2_pylhvm.jpg",
+      
+    ],
+    wines: [
+      {
+        id: 'FDP046',
+        name: "PETNAT 'L'Intact",
+        producer: 'Maison Yves Duport',
+        region: 'Rhône Alpes',
+        country: 'France',
+        vintage: 'NV',
+        grape: ['Gamay, Pinot noir'],
+        description: 'Bugey Pétillant Naturel ‘Intact Rosé’ 2025 is a biodynamic sparkling rosé crafted from Gamay and Pinot Noir in the southern Bugey region of France. Produced without added SO₂ or cultured yeasts, it undergoes a natural re-fermentation in bottle, following a cold-stopped primary fermentation. Lightly filtered, this wine embodies minimal intervention and mountain-influenced terroir.',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/c_crop,ar_9:16,f_png/v1747322761/Duport_20-_20Intact_20Rose_vyjzfe.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhône Alpes",
+          Appellation: "Vin de France",
+          ColorStyle: "Sparkling Rosé",
+          Grapes: "50% Pinot Noir, 50% Gamay",
+          HarvestDate: "September",
+          SO2: "No",
+          SoilComposition: "Clayey-limestone (white clay, mountain scree)",
+          Farming: "Family-farm with 18 hectares in the southern Bugey region overlooking the Rhône river / Biodynamic",
+          AgeOfVines: "30 Years ",
+          FiningFiltration: "Light Kieselguhr filtration before bottling for alcoholic refermentation.",
+          Winemaking: "Direct pressing using a pneumatic press. No SO2 added under the press or during bottling. No exogenous yeasts (LSA) added. First fermentation in cold-stopped vats with around 15 g sugar/l residual. Immediate bottling to resume natural fermentation in the bottle. No malolactic fermentation. Residual sugar < 2g"
+        },
+      },
+      {
+        id: '',
+        name: 'Burgey Blanc',
+        producer: 'Maison Yves DuPort',
+        region: 'Burgey',
+        country: 'France',
+        vintage: '2023',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/c_crop,ar_9:16,f_png/v1747322826/Duport_20-_20Bugey_20Chardonnay_wshr7n.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhône Alpes",
+          Appellation: "Bugey",
+          ColorStyle: "Blanc",
+          Grapes: "Chardonnay",
+          HarvestDate: "September",
+          SO2: "32 mg/L of SO₂ added at bottling.",
+          SoilComposition: "clayey-limestone (white clay, mountain scree)",
+          Farming: "Family-farm with 18 hectares in the southern Bugey region overlooking the Rhône river / Biodynamic",
+          AgeOfVines: "30 Years",
+          FiningFiltration: ": Kieselguhr filtration and membrane filtration at bottling",
+          Winemaking: `Direct pressing during the harvest with a pneumatic press
+Little SO2 added under the press and during bottling.
+Fermentation with exogenous yeasts (LSA) with temperature control
+around
+18°c. Ageing on lees in stainless steel vats for around 6 months
+No malolactic fermentation.`,
+        },
+      },
+      {
+        id: '',
+        name: "Vin de France Blanc, 'LES TROIS'",
+        producer: 'Maison Yves DuPort',
+        region: 'Burgey',
+        country: 'Fracne',
+        vintage: '2022',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/c_crop,ar_9:16,f_png/v1747335111/YvesDuportLesTrois2022_1024x1024_2x_upjnqo.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhône Alpes",
+          Appellation: "Vin de France",
+          ColorStyle: "Blanc",
+          Grapes: "",
+          HarvestDate: "September",
+          SO2: "32 mg/L of SO₂ added at bottling.",
+          SoilComposition: "",
+          Farming: "Family-farm with 18 hectares in the southern Bugey region overlooking the Rhône river / Biodynamic",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'fdp045',
+        name: "Vin de France Rosé, 'CELINE'",
+        producer: 'Maison Yves DuPort',
+        region: 'Burgey',
+        country: 'France',
+        vintage: '2024',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/c_crop,ar_9:16,f_png/v1747318219/Square_88028b47-a167-4ced-98dc-338fa2e51b18_rrz3kd.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhône Alpes",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "September",
+          SO2: "32 mg/L of SO₂ added at bottling.",
+          SoilComposition: "",
+          Farming: "Family-farm with 18 hectares in the southern Bugey region overlooking the Rhône river / Biodynamic",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FDO047',
+        name: "Burgey GAMAY, 'LE MARGINAL'",
+        producer: 'Maison Yves DuPort',
+        region: 'Burgey',
+        country: 'France',
+        vintage: '2022',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/c_crop,ar_9:16,f_png/v1747322329/yves-duport-le-marginal-french-natural-wine-primal-wine_g9fqct.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhône Alpes",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "32 mg/L of SO₂ added at bottling.",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: "Burgey PINOT NOIR, 'LE MORILLON'",
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/c_crop,ar_9:16,f_png/v1747322778/Duport_20-_20Mondeuse_202022_wvtl53.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhône Alpes",
+          Appellation: "Burgey",
+          ColorStyle: "RED",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "32 mg/L of SO₂ added at bottling.",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-la-croix-st-laurent',
+    name: 'Domaine La Croix St-Laurent',
+    regionId: 'loire',
+    region: 'LOIRE',
+    bannerImage: '',
+    description: '',
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-tinel-blondelet',
+    name: 'Domaine Tinel-Blondelet',
+    regionId: 'loire',
+    region: 'LOIRE',
+    bannerImage: '',
+    description: '',
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-pascal-bellier',
+    name: 'Domaine Pascal Bellier',
+    regionId: 'loire',
+    region: 'LOIRE',
+    bannerImage: '',
+    description: '',
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'christian-venier',
+    name: 'Christian Venier',
+    regionId: 'loire',
+    region: 'LOIRE',
+    bannerImage: '',
+    description: '',
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-beatrice-pascal-lambert',
+    name: 'Domaine Beatrice & Pascal Lambert',
+    regionId: 'loire',
+    region: 'LOIRE',
+    bannerImage: '',
+    description: '',
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'romain-petiteau',
+    name: 'Romain Petiteau',
+    regionId: 'loire',
+    region: 'LOIRE',
+    bannerImage: '',
+    description: '',
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'remi-thebault',
+    name: 'Remi Thebault',
+    regionId: 'loire',
+    region: 'LOIRE',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749814507/champagne-region-in-france-a-beautiful-view-royalty-free-image-1572445759_elz62e.jpg',
+    description: `Rémi Thebaut
+
+Rémi Thébault is an innovative French winemaker deeply committed to creating expressive wines that authentically reflect their terroir and grape varieties. His philosophy centers on organic viticulture and minimal intervention, embracing traditional techniques alongside creative experimentation.
+Rémi's wines are characterized by a unique approach to vinification, highlighting elegance, depth, and vibrant aromas. With vineyards ranging from 30 to 60 years old, he carefully cultivates predominantly Melon de Bourgogne grapes on frost-free plots of shallow sandy-loam soils over gneiss subsoil.
+His signature wines include diverse expressions—from the sweet, rounded character of "Quand je serais Grand.e," matured gently on lees in oak barrels, to the mineral freshness of the "Tatoumi" blend, harmonizing multiple vintages for complexity and depth. "Apnée du Soleil" showcases Rémi’s creativity with oxidative aging techniques in acacia barrels, offering aromatic power coupled with delicate acidity. Additionally, the enticing "Pouvoir des Pierres" offers an approachable entry into orange wines, featuring intriguing notes of caramel through short skin maceration.
+Rémi Thébault’s wines invite enthusiasts to explore new dimensions of flavor, each bottle telling a story of passion, authenticity, and dedication to the craft of winemaking.`,
+midia:[
+  "https://res.cloudinary.com/dglghqker/image/upload/v1749745261/a383fd2de57368783fd2de5736b83fv-960x622_odzpku.jpg",
+  "https://res.cloudinary.com/dglghqker/image/upload/v1749745259/remi-thebault-584009_z8ojaj.jpg",
+  "https://res.cloudinary.com/dglghqker/image/upload/v1749745260/2cead38fb16b85c39199095988bdde57_w882_m5jsm0.jpg",
+  "https://res.cloudinary.com/dglghqker/image/upload/v1749745258/3f5ba7b762736436ba7b76273076bav-960x622_betzrp.jpg",
+  "https://res.cloudinary.com/dglghqker/image/upload/v1749745258/remi-thebault-584012_a5n9bk.jpg",
+  "https://res.cloudinary.com/dglghqker/image/upload/v1749745260/wine-147642--post-284887-862255_fygcpk.jpg",
+  "https://res.cloudinary.com/dglghqker/image/upload/v1749814429/Banner_Remi_Thebaut_f9shux.png",
+],    
+wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749814701/SSSArtboard_122_fioxid.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749814709/Wine_Tasting_Document_2024_R_C3_A9mi_THEBAULT_dce4mw.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-le-loup-bleu',
+    name: 'Domaine Le loup Bleu',
+    regionId: 'cotes-de-provence',
+    region: 'CÔTE DE PROVENCE',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749815236/Le-Loup-Bleu-002-1800x900_usdoax.jpg',
+    description: 'The Domaine le Loup Bleu is in Puyloubier, between the Sainte-Victoire mountain to the north and the Auréliens mountains to the south. It is a family-run winegrowing estate producing PDO Côtes de Provence and PDO Côtes de Provence Saint-Victoire, all certified organic.',
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815343/Le-Loup-Bleu-010-1800x900_uweqxr.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815345/IMG_4569-scaled_t3tsrq.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815248/image_g8fwsa.webp",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815245/image_xbuh4l.webp",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815242/image_evnlhg.webp",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815234/Le-Loup-Bleu-004_nm4qmi.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815229/Le-Loup-Bleu-001-1800x900_h8ilpi.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815225/28538174_camurp.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815218/domaine-le-loup-bleu-vineyard-sainte-victoire-sainte-victoire_itmqvs.png",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815226/28538173_i52cwc.jpg",
+    ],
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: 'C',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749815224/447e7044ea6db78fa7becbace0d0b3b5_xzccay.png', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-de-boissan',
+    name: 'Domaine de Boissan',
+    regionId: 'rhone',
+    region: 'RHÔNE',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749815893/boissan_13_aatnb9.jpg',
+    description: `Domaine de Boissan is located in Sablet in the Rhône Valley, and has been passed down through five generations of winemakers, making it among the oldest in the southern Rhone. Christian Bonfils, with support from his wife Cathy (formerly of Pommard), now guides the nearly 50 hectares of vines here with a wise and restrained eye. Farming practices remain conscientious of the effects upon the earth. Only organic fertilizer is added to the soil, which is mechanically maintained, and grapes are handpicked at harvest. Christian prefers to make his wines in a more traditional style; they are marked by a delicate approach to fruit.`,
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749816900/Boissan_2_i7q9yy.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749816881/C._Bonfils_Old_Grenache_vines_dnon5s.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749816859/Bonfils.harvest_bnrmgt.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749816865/C._Bonfils_cellar_xjdw5l.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815897/C._Bonfils_vineyard_eyat8f.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815891/Boissan_1_soy3hg.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749815894/CSXlkQqwT763R5wMfIM0Vg_pl_375x500_bslsna.png",
+    ],
+    wines: [
+      {
+        id: 'FBS034',
+        name: 'Gigondas, Vieilles-Vignes',
+        producer: 'christian-bonfils',
+        region: 'Rhone',
+        country: 'France',
+        vintage: '2021',
+        grape: ['80% Grenache, 20% Syrah'],
+        description: 'Grown in clay soil with limestone in the slopes and lots of gravel on the terraces, this wine comes from 40 to 50 year old vines of Grenache and Syrah. The grapes are hand-harvested and crushed, then undergo a 2 to 3 day cold maceration. A traditional style of fermentation follows and lasts about 20 to 30 days with daily delestage. About 30% of the resulting wine is aged in 1 and 2-year old barrels for 6 to 12 months while the other 70% is aged in stainless steel vats. Yields about 35 hL/ha.',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/v1749817227/c8fc99c61d8349559d8cb3d8e93a684f_gqd6mt.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhone",
+          Appellation: "Côtes-du-Rhône",
+          ColorStyle: "RED",
+          Grapes: "80% Grenache, 20% Syrah",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FBF020',
+        name: 'Côtes-du-Rhône, ‘La Cuvée des Princes d’Orange’',
+        producer: 'christian-bonfils',
+        region: 'Rhone',
+        country: 'France',
+        vintage: '2023',
+        grape: ['100% Grenache'],
+        description: 'La Cuvée des Princes d’Oranges comes from vines ranging in age from ten to thirty-five years old. The vines are grown in clay soil with some limestone and with gravelly patches on the terraced slopes. Grapes are hand-harvested and undergo an eight to ten-day maceration without being crushed. Daily délestage, as with many of Boissan’s cuvées, takes place. After fermentation, the wine is aged for six months in concrete vats and then six to eight additional months in oak. Yields of about 50 hL/ha.',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/v1749815896/c1vrrhprinr201775cdd-image-main_vryjee.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Rhone",
+          Appellation: "Côtes-du-Rhône",
+          ColorStyle: "RED",
+          Grapes: "100% Grenache",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'domaine-andre-mathieu',
+    name: 'Domaine Andrè Mathieu',
+    regionId: 'rhone',
+    region: 'RHÔNE',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749818650/0514bc8536f34d6732e8b30785f007ae633ee9bb_Domaine-Andre-Mathieu-vin-blanc_lftfpg.jpg',
+    description: `The Andre Mathieu Estate consists of family-owned vineyards handed down from father to son since 1600. The various red and white cuvees they make from the appellation's 13 designated grape varieties reflect all the heritage and power of Chateauneuf du Pape wines. Their 13 hectares of vineyards within the Chateauneuf du Pape appellation benefit from the richness and diversity of the region's renowned terroirs.  In fact, until 1980, a concrete tank could be found in the family’s kitchen, and every harvest season the kitchen had to be vacated to facilitate the production. They have updated the production, investing in new cellars and tanks, as well as recoating the insides of the existing tanks with epoxy. Theirs is a traditional winemaking mantra, learned from the generations before, and they utilize all thirteen grapes authorized by the AOC. They prefer a truly spontaneous fermentation, so temperatures are not regulated. Their foudres vary in age, up to 100 years, imparting varying degrees of oak on their cuvées. André Mathieu insists that they want minimum oxygenation during fermentation and no taste of oak: their 100-year old foudres have helped immensely in this goal. These wines are ripe, powerful, and sumptuous.`,
+    midia:[
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818803/Domaine-Andre_20Mathieu-caveau_cdwx2c.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818799/chateauneuf-du-pape_teuxfv.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818791/Domaine-Andre_20Mathieu-Chateauneuf-du-Pape-rouge-mosaique_dehjjt.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818744/chateauneuf-du-pape-tradition-2017-rouge_bqpvbd.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818753/Domaine-Andre-Mathieu-mosaique_bf5uuu.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818665/48f432e0e8c56ba96f2a02dba8d70b3146157bb1_Domaine-Andre-Mathieu-Chateauneuf-du-Pape-vin_ppmy0h.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818641/998511b916a06378d37f26613a5f6c35ad01fa7b_Domaine-Andre-Mathieu-Chateauneuf-du-Pape_jvlaky.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818630/domaine-andre-mathieu-logo-blason-blanc_t3331c.png",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818084/06EDEB7B-09D6-4081-8646-ADE7F634E25A_flwbui.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818068/CFD4B625-6B74-4652-951E-16045AE1937E_xhgwko.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818080/Avril2018-1_rcci1a.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749818061/Domaine-Mathieu_liafil.jpg",
+    ],
+    wines: [
+      {
+        id: 'FMU036',
+        name: 'Châteauneuf-du-Pape Rouge, "La Centenaire"',
+        producer: 'Andre Mathieu',
+        region: 'RHONE',
+        country: 'France',
+        vintage: '2020',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/f_png/v1749818720/chateauneuf-du-pape-tradition-2017-rouge_kizubp.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FMU035',
+        name: 'Châteauneuf-du-Pape, Rouge “Tradition”',
+        producer: 'Andre Mathieu',
+        region: 'RHONE',
+        country: 'France',
+        vintage: '2020',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/f_png/v1749818699/chateauneuf-du-pape-tradition-2017-rouge_ow4elq.jpg', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'mas-d-agalis-lionel-mauriel',
+    name: "Mas d' Agalis - Lionel Mauriel",
+    regionId: 'languedoc-roussillon',
+    region: 'LANGUEDOC-ROUSSILLON',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749827426/vinibee-vins-bio-biodynamiques-et-naturels-mas-dagalis-lionel-maurel-photodomaine2-transformed_oetbm3.jpg',
+    description: `Lionel Maurel is of the fourth generation of winemakers in his family, but he broke from the ways of his father and grandfather who previously sold their grapes to co-ops, choosing instead to make and sell his own wines in 2004. His land is in Nébian, about 40 kilometers northwest of Montpélier. He makes two cuvées from four classic Languedoc varietals—Syrah, Grenache, Mourvèdre, and Carignan—selling them under the classifications Vin de Table and Vin de Pays du Lac de Salagou. Young Lionel farms his grapes organically, paying special attention to each individual parcel. He tills the soil by hand, uses only organic fertilizers (cow and sheep manure), and treats his vines with copper and sulfur. Above all, he seeks to reflect the vintage in his wines. Lionel farms 2.4 hectares of 70-year old Carignan vines on terraces from the Villafranchian period (1.9 to 1.8 million years ago) with rolled pebbles. His 12-year old Grenache vines cover about one hectare of Villafranchian terraces, and he farms about 2.5 hectares of 14-year old Syrah vines, also on Villafranchian terraces. Finally, his 18-year old Mourvèdre vines cover about half a hectare, all yielding 30 hectoliters per hectare. All grapes are handpicked, sorted, and steeped. Fermentation lasts about 15 days and is begun using only indigenous yeasts without SO2. The wine is then moved to a vat for ten days before being moved to a cask. At this point, Lionel may add about 2 grams of sulfuric dioxide per hectoliter if needed, dependent upon the vintage. All wine is aged about 12 to 18 months in the barrel.
+Certified Ecocert (ca.2012) `,
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749827447/Agalis_Carignan_vines_ecj9bf.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749827478/Mas_d_27Agalis_vineyard_pn13at.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749827562/mas_agalis_10_le6vuu.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749827559/mas-dagalis-1_nvwuza.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749827439/Mas_Aga_2_ogn182.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749827569/26_cd39251a-65dc-415b-87a1-01605639df55_600x_rgel9e.jpg",
+    ],
+    wines: [
+      {
+        id: 'FMD018',
+        name: 'Vin de France, “Yo No Puedo Mas”',
+        producer: 'Lionel Mauriel',
+        region: 'LANGUEDOC-ROUSSILLON',
+        country: 'FRANCE',
+        vintage: '',
+        grape: [''],
+        description: `The vines age between 26 year-old Syrah, 35 years-old Carignan and 7 year-old Cinsault that produces about 45 hl/ha. The grapes are hand-harvested between late August and mid-September, de-stemmed and sorted before maceration. Spontaneous fermentation with indigenous yeasts lasts about 15 days. The wine is then moved to a vat for 4-5 days before being aged for one year: 85% in stainless steel tank and 15% in barrel (10 years of age). Lightly filtered and minimal amount of SO2 (~2 g/hL) at bottling. `,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/f_png/v1749827964/ynp_j1yh43.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "LANGUEDOC-ROUSSILLON",
+          Appellation: "Vin de France",
+          ColorStyle: "RED",
+          Grapes: "40% Carignan, 40% Syrah, 20% Cinsault",
+          HarvestDate: "Semptamber",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'chateau-le-payral-thierry-isabelle-daulhiac',
+    name: 'Château le Payral - Thierry & Isabelle Daulhiac',
+    regionId: 'southwest',
+    region: 'SOUTHWEST',
+    bannerImage: 'https://res.cloudinary.com/dglghqker/image/upload/v1749828728/1660316891_d8n0788_s_idx0sl.jpg',
+    midia: [
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828732/Bergerac_orobxl.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828722/_D8N3857_copie_wy9riq.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828724/_D8N4191_copie_yywi5b.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828735/carnet_bord_chateau_payral_octobre-768x432_evmjjd.webp",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828719/payral1_yfrfyw.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828717/chateau-payral-agriculture-biodynamique-galerie-bouchon-liege-1024x1024_rxkclv.webp",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828712/_D8N6491_zhj0f8.jpg",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749828730/illustration_les_traditionnels-1024x1024_rkopmv.webp",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749830487/square-4e2840afdc66d487fdc64b1515e57589_obeqwn.webp",
+      "https://res.cloudinary.com/dglghqker/image/upload/v1749834437/chateau-payral-vins-sans-sulfites-ajoutes-les-originales-illustration-1024x1024_dfll7u.webp",
+    ],
+    description: `From 1992, Thierry and Isabelle Daulhiac have had the run of the nineteenth century manor house and the surrounding fifteen hillside hectares of vineyards, since it was handed down to them from the previous two generations. They are nestled between two oft-foggy appellations of Montbazillac and Sainte-Foy, in the town of Razac de Saussignac, with vines facing the Dordogne, about two kilometers to the north. When they took over in 1992, traditional farming methods were common, but the duo have slowly converted to organic (near biodynamic) practices in the vineyards. They cultivate eight hectares of white grapes (Sémillon, Muscadelle and Sauvignon Blanc) and seven of red (Merlot with Cabernet Franc and Cabernet Sauvignon). The organic methods have improved the outcome of their pebbled, muddy soils, heavy with clay, silt and sand, preventing the mildew and rot that the area can so easily bring. The cellar sees a combination of traditional and unique practices, incorporating some modern techniques to present more elegant and pure-fruited wine, and ageing occurs in a combination of oak and steel. A bright future lies ahead as they see the benefits of their natural ways affecting their plots. Perhaps the ideas will flow as easily into the wine making, ready to pass along to the next inhabitants of the elder estate. We like the prospects so far.
+Certified Biodynamic (Demeter) `,
+    wines: [
+      {
+        id: 'FPR035',
+        name: 'BERGERAC BLANC SEC',
+        producer: 'Thierry & Isabelle Daulhiac',
+        region: 'SOUTHWEST',
+        country: 'France',
+        vintage: '',
+        grape: [''],
+        description: `All grapes are hand-harvested and sorted before undergoing an eighteen-hour maceration. The grapes are then gently pressed into a steel tank where selected yeasts begin fermentation. Under temperature control, the lees are removed and are allowed to oxygenate for one to three weeks, after which they are reincorporated. The wine then rests until settled and is bottled with SO2.`,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/f_png/v1749829109/chateau-le-payral-blanc_ynaapo.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Southwest",
+          Appellation: "Vin de France",
+          ColorStyle: "White",
+          Grapes: "50% Sauvignon Blanc, 30% Sémillon, 20% Muscadelle",
+          HarvestDate: "September",
+          SO2: "",
+          SoilComposition: "clay",
+          Farming: "organic and biodynamic",
+          AgeOfVines: "25 years",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FPR027',
+        name: 'BERGERAC ROUGE',
+        producer: 'Thierry & Isabelle Daulhiac',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1749829814/Mon-projet-1-324x1024_puqz23.png', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Southwest",
+          Appellation: "Vin de France",
+          ColorStyle: "RED",
+          Grapes: "50% Merlot, 25% Cabernet Franc, 25% Cabernet Sauvignon",
+          HarvestDate: "September",
+          SO2: "",
+          SoilComposition: "clay",
+          Farming: "organic and biodynamic",
+          AgeOfVines: "25 years",
+          FiningFiltration: "45 mg/l total",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FRP036',
+        name: 'Vin de France, "La Bise"',
+        producer: 'Thierry & Isabelle Daulhiac',
+        region: 'Southwest',
+        country: 'FRANCE',
+        vintage: '',
+        grape: [''],
+        description: `From 20 year old vines planted to 1.5ha of sand and clay limestone soils, the grapes are harvested between August 25th and September 2nd. Maceration lasts six months followed by spontaneous fermentation lasting three weeks with temperature control in stainless steel. Unfiltered. `,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/f_png/v1749830534/la-bise-chateau-le-payral-natural-Orange-wine-Bergerac-France_front_label_1080x_nislbk.jpg', // image for wine
+        technical: {
+          Country: "France",
+          Region: "Southwest",
+          Appellation: "Vin de Frace",
+          ColorStyle: "RED",
+          Grapes: "50% Sémillon, 50% Sauvignon Blanc",
+          HarvestDate: "September",
+          SO2: " < 0.3 g/L",
+          SoilComposition: "Clay",
+          Farming: "organic and biodynamic",
+          AgeOfVines: "+ 25 years old",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: 'FRP034',
+        name: 'NEO',
+        producer: 'Thierry & Isabelle Daulhiac',
+        region: 'Southwest',
+        country: 'FRANCE',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/e_background_removal/f_png/v1749834432/imageedit_18_7274001755_vfxccf.png', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'sektkellereiOhlig',
+    name: 'Sektkellerei Ohlig',
+    regionId: 'rheingau',
+    region: 'rheingau',
+    bannerImage: 'https://www.vinello.eu/media/image/03/14/b2/Sektkellerei-Ohlig-seit-1919.png',
+    description: '',
+    wines: [
+      {
+        id: '',
+        name: '',
+        producer: '',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+      {
+        id: '',
+        name: '',
+        producer: '',
+        region: '',
+        country: '',
+        vintage: '',
+        grape: [''],
+        description: '',
+        image: '', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+      },
+    ]
+  },
+  {
+    id: 'weinhofScheu',
+    name: 'Weinhof Scheu',
+    regionId: 'pfalz',
+    region: 'pfalz',
+    bannerImage: 'https://weinhof-scheu.de/cdn/shop/files/scheu-wappen.svg?crop=center&height=32&v=1678181872&width=32',
+    description: `Klaus Scheu took control of Weinhof Scheu from his father, Günter who retired in 1994. Theirs is a weinhof without borders, as it sits so close to Alsace in France that the vines nearly cross back and forth. Klaus, like his father, maps this not by geographic boundary, but by micro-climate and by the soil’s complexity, creating a unique home for each varietal and clone. His philosophy: the more precise the designation of origin, the higher the quality of wine. In all, there are yellow and blue clays, limestone, silica, sandstone, chalk, and slate decorating the soils, each positioned to various exposures. From this springs the voice of individual terroir. To preserve this individuality, Klaus does not craft the wines based on the specific ripeness levels, like his northern German neighbors in Mosel. Older vines and meticulous vineyard work keep yields excessively low, which adds to the concentration of his wines. The cellar, too, allows for what the parcel and vintage have presented. There are both steel and oak vessels, and fermentations are allowed to occur at their own pace. This all drives to an output of high-density flavors and full concentration of fruits in the wine. Klaus claims that no other wine can be replicated like his, as he is making wine for his parcels, and they reflect that even in the poor vintages.`,
+    midia: [
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747941673/regenschirm_d6eab837-70be-4842-a45d-fca0da84cbe1_y2uzgy.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747941697/flasche-mitgrenze_ydn9e6.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747941685/hacke_uulkvo.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747941707/start-background_tui3hv.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747941776/phosphor.utils.elfsightcdn.com_yinthc.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747941716/scheu-logo_jbeiyy.svg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747941726/scheu-wappen_ivzd3e.svg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747999647/Scheu_G_C3_BCnther_r2bcbz.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747999656/Scheu_Raedling_rghanz.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747999664/Scheu_sign_aqqrux.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747999669/SCHEU_oteqe6.jpg',
+      'https://res.cloudinary.com/dglghqker/image/upload/v1747999708/FT_Scheu_Spat_Trocken_2015_of9xjh.png',
+    ],
+    wines: [
+      {
+        id: '',
+        name: 'Pfalz, Spätburgunder Trocken',
+        producer: 'Weinhof Scheu',
+        region: 'pfalz',
+        country: 'germany',
+        vintage: '2023',
+        grape: ['100% Spätburgunder'],
+        description: `The term ‘Schweigener Riesling ’was, until 1971, from changes in the
+German Wine Act, the valid term for Riesling grown in the area. The vines
+are grown on limestone soils with calcite deposits facing southeast and are
+hand-harvested at the end of October.`,
+        image: 'https://res.cloudinary.com/dglghqker/image/upload/v1747941779/SCHEU-spaetburgunder-trocken_sk1jcl.png', // image for wine
+        technical: {
+          Country: "",
+          Region: "",
+          Appellation: "",
+          ColorStyle: "",
+          Grapes: "",
+          HarvestDate: "",
+          SO2: "",
+          SoilComposition: "",
+          Farming: "",
+          AgeOfVines: "",
+          FiningFiltration: "",
+          Winemaking: ""
+        },
+     },
+   ]
+  },
+];
+
+// Função que retorna os produtores de uma determinada regiãos
+import { regions } from './regions';
+
+export const getProducersByRegion = (regionId: string) => {
+  const region = regions.find(r => r.id === regionId); // encontra a região
+  const regionProducers = producers.filter(p => p.regionId === regionId); // filtra os produtores que pertencem à região
+  return { region, producers: regionProducers };
+};
+
+// Função que retorna um produtor específico com base no seu ID
+export const getProducerById = (producerId: string) => {
+  return producers.find(p => p.id === producerId); // busca direta no array de produtores
+};
